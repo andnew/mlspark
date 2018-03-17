@@ -5,7 +5,7 @@ from pyspark.sql import SparkSession
 import matplotlib.pyplot as plt
 import numpy as np
 
-spark = SparkSession.builder.appName("movie_list").getOrCreate()
+spark = SparkSession.builder.appName("user_list").getOrCreate()
 
 spark.read.csv(sep="|", path="/Users/wangyong/xcript/ml/ml-100k/u.user") \
     .selectExpr("_c0 as id", "_c1 as age", "_c2 as gender", "_c3 as occupation", "_c4 as zip_code") \
